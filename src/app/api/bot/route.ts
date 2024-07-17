@@ -11,7 +11,7 @@ if (!token)
 
 const bot = new Bot(token);
 bot.on('message:text', async (ctx) => {
-  await ctx.reply(ctx.message.text);
+  await ctx.reply(JSON.stringify(ctx)); //.message.text);
 });
 
 export const POST = webhookCallback(bot, 'std/http');
