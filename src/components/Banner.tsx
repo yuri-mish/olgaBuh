@@ -1,3 +1,5 @@
+import { HiOutlineMail, HiOutlinePhone } from 'react-icons/hi';
+
 import NextImage from '@/components/NextImage';
 
 const Banner = () => {
@@ -10,7 +12,7 @@ const Banner = () => {
               Професійні бухгалтерські послуги
             </div>
             <p className='text-md md:text-lg leading-7 mt-4'>
-              Наддаємо послуги професійного бухгалтерського супроводу малих,
+              Надаємо послуги професійного бухгалтерського супроводу малих,
               середніх та великих підприємств та ФОП. Подача звітностів в
               контролюючі органи. Ведення обліку за національними та
               міжнародними стандартами.
@@ -65,7 +67,7 @@ const Banner = () => {
               Важливо!!! <br /> Під час воєнного стану
             </div>
             <p className='text-md md:text-lg leading-7 mt-4'>
-              Наша команда і наші компанії працюють і працюватимуть у звичному
+              Наша команда і наша компанія працює і працюватиме у звичному
               режимі, за винятком перерви в роботи офісів під час повітряної
               тривоги.
               <br /> Компанія забезпечена засобами безперебійного
@@ -89,29 +91,22 @@ const Banner = () => {
             <p className='text-md md:text-lg leading-7 mt-4'>
               Понеділок-П’ятниця – з 8:30 до 18:30 без перерви <br />
               Субота в телефонному режимі <br />
-              Неділя (святкові і неробочі дні) – зачинено
+              Неділя – зачинено
               <br />
               <br />
               Онлайн-візити / Послуги на місці
               <br />
-              м.Киів вул.Козацька 116
-              <br />
-              067 215 01 10
+              <div className='flex items-center gap-5'>
+                <HiOutlinePhone /> 095 541 98 10{' '}
+              </div>
+              <div className='flex items-center gap-5'>
+                <HiOutlineMail /> olganik2477@gmail.com{' '}
+              </div>
             </p>
             {/* <Button className='hidden md:flex mt-11'>
               Explore Now
             </Button> */}
           </div>
-          {/* <div className='block mt-0 md:mt-7 w-full'>
-            <NextImage
-                useSkeleton
-                className='w-full md:w-full xl:ml-[-0rem]'
-                src='/images/banner.png'
-                width='714'
-                height='568'
-                alt='Icon'
-              />
-          </div> */}
         </div>
       </section>
     </div>
