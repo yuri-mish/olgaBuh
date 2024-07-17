@@ -6,7 +6,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['Inter', ...defaultTheme.fontFamily.sans],
+        comfortaa: ['var(--font-comfortaa)', ...defaultTheme.fontFamily.sans],
+        primary: ['Comfortaa', 'Roboto', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {

@@ -1,11 +1,19 @@
 import { Metadata } from 'next';
+import { Comfortaa } from 'next/font/google';
 import * as React from 'react';
 
 import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
 
+import { Header } from '@/components/Header';
+
 import { siteConfig } from '@/constant/config';
+
+const comfortaa = Comfortaa({
+  subsets: ['cyrillic', 'latin'],
+  variable: '--font-comfortaa',
+});
 
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them
@@ -55,8 +63,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
-      <body>{children}</body>
+    <html
+      lang='uk'
+      className={`${comfortaa.variable} font-comfortaa min-h-screen max-h-screen`}
+    >
+      <body className='font-comfortaa block '>
+        <main className='flex flex-col relative'>
+          <Header />
+          <div className='flex '>{children}</div>
+        </main>
+        <footer></footer>
+      </body>
     </html>
   );
 }
