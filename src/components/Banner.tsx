@@ -9,7 +9,7 @@ const Banner = () => {
         <div className='block sm:grow lg:flex sm:flex-nowrap md:min-h-full xl:flex-row items-center justify-center min-h-24 px-5 sm:px-10 xl:px-10 '>
           <div className='max-w-xl'>
             <div className='font-semibold text-xl md:text-3xl leading-[1.76rem] '>
-              Професійні бухгалтерські послуги
+              Стомилися самостійно сплачувати податки і подавати звітність?
             </div>
             <p className='text-md md:text-lg leading-7 mt-4'>
               Надаємо послуги професійного бухгалтерського супроводу малих,
