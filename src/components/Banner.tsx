@@ -13,7 +13,7 @@ const Banner = () => {
             </div>
             <p className='text-md md:text-lg leading-7 mt-4'>
               Надаємо послуги професійного бухгалтерського супроводу малих,
-              середніх та великих підприємств та ФОП. Подача звітностів в
+              середніх та великих підприємств а також ФОП. Подача звітностів в
               контролюючі органи. Ведення обліку за національними та
               міжнародними стандартами.
             </p>
@@ -44,7 +44,7 @@ const Banner = () => {
               Ми вміємо “робити” бухгалтерію якісно та швидко, незалежно від
               масштабу Вашого підприємства. З нами ви будете почуватися в повній
               безпеці. Команда бухгалтерів, фінансистів та юристів забезпечує
-              комплексний підхід у вирішенні поточних та стратегічних завдань.{' '}
+              комплексний підхід у вирішенні поточних та стратегічних завдань.
             </p>
           </div>
           <div className='flex mt-0 md:mt-7 w-full'>
@@ -96,13 +96,14 @@ const Banner = () => {
               <br />
               Онлайн-візити / Послуги на місці
               <br />
-              <div className='flex items-center gap-5'>
-                <HiOutlinePhone /> 095 541 98 10{' '}
-              </div>
-              <div className='flex items-center gap-5'>
-                <HiOutlineMail /> olganik2477@gmail.com{' '}
-              </div>
             </p>
+            <div className='flex items-center gap-5'>
+              <HiOutlinePhone /> 095 541 98 10{' '}
+            </div>
+            <div className='flex items-center gap-5'>
+              <HiOutlineMail /> olganik2477@gmail.com{' '}
+            </div>
+
             {/* <Button className='hidden md:flex mt-11'>
               Explore Now
             </Button> */}
