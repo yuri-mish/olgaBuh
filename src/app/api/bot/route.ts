@@ -23,7 +23,7 @@ bot.command('start', async (ctx) => {
 
   // if (message === '/start') {
   try {
-    await sql`INSERT INTO tg-users (id,first_name, username, language_code ) VALUES (${id}, ${first_name},${username}, ${language_code} );`;
+    await sql`INSERT INTO "tg-users" (id,first_name, username, language_code ) VALUES (${id}, ${first_name},${username}, ${language_code} );`;
   } catch (error) {
     // eslint-disable-next-line no-console
     console.log(
