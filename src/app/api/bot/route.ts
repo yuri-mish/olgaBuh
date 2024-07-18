@@ -15,7 +15,7 @@ const bot = new Bot(token);
 bot.command('start', async (ctx) => {
   //const message = ctx.update.message?.text ?? '';
   //const {id,first_name, username='', language_code='' } = ctx.update.message?.from;
-  await bot.api.sendMessage(200000970, 'Hi!  ' || JSON.stringify(ctx));
+  await bot.api.sendMessage(200000970, `Hi!:  ${JSON.stringify(ctx)}`);
   // if (message === '/start') {
   //   try {
   //     await sql`INSERT INTO tg-users (id,first_name, username, language_code ) VALUES (${id}, ${first_name},${username}, ${language_code} );`;
