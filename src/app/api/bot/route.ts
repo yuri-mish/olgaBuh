@@ -2,8 +2,8 @@ export const dynamic = 'force-dynamic';
 
 export const fetchCache = 'force-no-store';
 
+import { sql } from '@vercel/postgres';
 import { Bot, webhookCallback } from 'grammy';
-//import { sql } from '@vercel/postgres';
 
 const token = process.env.TELEGRAM_BOT_TOKEN;
 
@@ -14,14 +14,24 @@ const bot = new Bot(token);
 
 bot.command('start', async (ctx) => {
   //const message = ctx.update.message?.text ?? '';
-  //const {id,first_name, username='', language_code='' } = ctx.update.message?.from;
-  await bot.api.sendMessage(200000970, `Hi!:  ${JSON.stringify(ctx)}`);
+
+  const {
+    id,
+    first_name,
+    username = '',
+    language_code = '',
+  } = ctx.update.message?.from ?? {};
+
   // if (message === '/start') {
-  //   try {
-  //     await sql`INSERT INTO tg-users (id,first_name, username, language_code ) VALUES (${id}, ${first_name},${username}, ${language_code} );`;
-  //   } catch (error) {
-  //     return bot.NextResponse.json({ error }, { status: 500 });
-  //   }
+  try {
+    await sql`INSERT INTO tg-users (id,first_name, username, language_code ) VALUES (${id}, ${first_name},${username}, ${language_code} );`;
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.log('error inserting', id, first_name, username, language_code);
+    return;
+    //      return NextResponse.json({ error }, { status: 500 });
+  }
+  await bot.api.sendMessage(<number>id, `Hi!:  ${first_name}`);
   // }
 });
 
