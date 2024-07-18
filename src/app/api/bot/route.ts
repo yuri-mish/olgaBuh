@@ -14,7 +14,6 @@ const bot = new Bot(token);
 
 bot.command('start', async (ctx) => {
   //const message = ctx.update.message?.text ?? '';
-
   const {
     id,
     first_name,
@@ -27,11 +26,18 @@ bot.command('start', async (ctx) => {
     await sql`INSERT INTO tg-users (id,first_name, username, language_code ) VALUES (${id}, ${first_name},${username}, ${language_code} );`;
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.log('error inserting', id, first_name, username, language_code);
+    console.log(
+      'error inserting',
+      error,
+      id,
+      first_name,
+      username,
+      language_code,
+    );
     return;
     //      return NextResponse.json({ error }, { status: 500 });
   }
-  await bot.api.sendMessage(<number>id, `Hi!:  ${first_name}`);
+  await bot.api.sendMessage(<number>id, `Hi!: ${first_name}`);
   // }
 });
 
