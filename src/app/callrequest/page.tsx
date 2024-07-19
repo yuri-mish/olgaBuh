@@ -29,7 +29,7 @@ export default function CallRequest() {
   return (
     <div className='flex flex-col min-h-main w-full px-5'>
       <div className='font-bold text-xl md:text-3xl leading-[1.76rem] pt-5'>
-        Ми Вам затефонуємо
+        Ми Вам зателефонуємо
       </div>
       <form
         onSubmit={(e) => {
