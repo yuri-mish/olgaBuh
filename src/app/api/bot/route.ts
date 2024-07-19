@@ -19,9 +19,10 @@ bot.command('start', async (ctx) => {
     first_name,
     username = '',
     language_code = '',
+    // eslint-disable-next-line no-console
   } = ctx.update.message?.from ?? {};
+  console.log(ctx.update.message?.from);
 
-  // if (message === '/start') {
   try {
     await sql`INSERT INTO "tg-users" (id,first_name, username, language_code ) VALUES (${id}::bigint, ${first_name},${username}, ${language_code} );`;
   } catch (error) {
@@ -35,14 +36,12 @@ bot.command('start', async (ctx) => {
       language_code,
     );
     return;
-    //      return NextResponse.json({ error }, { status: 500 });
   }
   await bot.api.sendMessage(<number>id, `Hi!: ${first_name}`);
-  // }
 });
 
 bot.on('message:text', async (ctx) => {
-  await ctx.reply(JSON.stringify(ctx)); //.message.text);
+  await ctx.reply(JSON.stringify(ctx.message.text));
 });
 
 export const POST = webhookCallback(bot, 'std/http');

@@ -1,5 +1,7 @@
+import Link from 'next/link';
 import { HiOutlineMail, HiOutlinePhone } from 'react-icons/hi';
 
+import Button from '@/components/buttons/Button';
 import NextImage from '@/components/NextImage';
 
 const Banner = () => {
@@ -108,9 +110,9 @@ const Banner = () => {
               <HiOutlineMail /> olganik2477@gmail.com{' '}
             </div>
 
-            {/* <Button className='hidden md:flex mt-11'>
-              Explore Now
-            </Button> */}
+            <Button className=' md:flex mt-11'>
+              <Link href='/callrequest'>Замовити дзвінок </Link>
+            </Button>
           </div>
         </div>
       </section>
