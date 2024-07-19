@@ -110,6 +110,14 @@
     display: inline-block;
     scroll-snap-align: start;
   }
+
+  .s-header {
+    @apply font-bold leading-5 text-lg md:text-3xl md:leading-[1.76rem];
+  }
+
+  .s-text {
+    @apply text-sm leading-5 md:text-lg md:leading-7 mt-4;
+  }
 }
 
 @layer utilities {

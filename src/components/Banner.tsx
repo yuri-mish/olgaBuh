@@ -10,10 +10,10 @@ const Banner = () => {
       <section id='section1' className='section items-center overflow-hidden '>
         <div className='block sm:grow lg:flex sm:flex-nowrap md:min-h-full xl:flex-row items-center justify-center min-h-24 px-5 sm:px-10 xl:px-10 '>
           <div className='max-w-xl'>
-            <div className='font-semibold text-xl md:text-3xl leading-[1.76rem] '>
+            <div className='s-header '>
               Стомилися самостійно сплачувати податки і подавати звітність?
             </div>
-            <p className='text-md md:text-lg leading-7 mt-4'>
+            <p className='s-text'>
               Надаємо послуги професійного бухгалтерського супроводу малих,
               середніх та великих підприємств а також ФОП. Подача звітностів в
               контролюючі органи. Ведення обліку за національними та
@@ -40,13 +40,13 @@ const Banner = () => {
         </div>
       </section>
 
-      <section id='section2' className='section'>
+      <section id='section2' className='section items-center overflow-hidden'>
         <div className='block sm:grow sm:flex sm:flex-nowrap xl:min-h-full xl:flex-row items-center justify-center min-h-24 px-5 sm:px-10 xl:px-10'>
           <div className=''>
-            {/* <div className='font-bold text-xl md:text-3xl leading-[1.76rem] '>
+            {/* <div className='s-header '>
             Важливо!!! <br/> Під час воєнного стану
             </div> */}
-            <p className='text-md md:text-lg leading-7 mt-4'>
+            <p className='s-text'>
               Ми вміємо “робити” бухгалтерію якісно та швидко, незалежно від
               масштабу Вашого підприємства. З нами ви будете почуватися в повній
               безпеці. Команда бухгалтерів, фінансистів та юристів забезпечує
@@ -66,13 +66,16 @@ const Banner = () => {
         </div>
       </section>
 
-      <section id='sectionMilitary' className='section'>
+      <section
+        id='sectionMilitary'
+        className='section items-center overflow-hidden'
+      >
         <div className='block sm:grow sm:flex sm:flex-nowrap xl:min-h-full xl:flex-row items-center justify-center min-h-24 px-5 sm:px-10 xl:px-10'>
           <div className=''>
-            <div className='font-bold text-xl md:text-3xl leading-[1.76rem] '>
+            <div className='s-header'>
               Важливо!!! <br /> Під час воєнного стану
             </div>
-            <p className='text-md md:text-lg leading-7 mt-4'>
+            <p className='s-text'>
               Наша команда і наша компанія працює і працюватиме у звичному
               режимі, за винятком перерви в роботи офісів під час повітряної
               тривоги.
@@ -88,14 +91,17 @@ const Banner = () => {
           </div>
         </div>
       </section>
-      <section id='sectionContact' className='section'>
+      <section
+        id='sectionContact'
+        className='section items-center overflow-hidden'
+      >
         <div className='block sm:grow sm:flex sm:flex-nowrap xl:min-h-full xl:flex-row items-center justify-center min-h-24 px-5 sm:px-10 xl:px-10'>
           <div className=''>
-            <div className='font-bold text-xl md:text-3xl leading-[1.76rem] '>
+            <div className='s-header'>
               Час роботи офісів і контакт-центру для взаємодії з клієнтами:
             </div>
-            <p className='text-md md:text-lg leading-7 mt-4'>
-              Понеділок-П’ятниця – з 8:30 до 18:30 без перерви <br />
+            <p className='s-text'>
+              Пон-П'ят – з 8:30 до 18:30 без перерви <br />
               Субота в телефонному режимі <br />
               Неділя – зачинено
               <br />

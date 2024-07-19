@@ -21,11 +21,12 @@ export const createMessage = async ({ phone, text = '' }: FormData) => {
 
 Замовлення дзвінка
 Телефон: <b>${phone}</b>
+Текст: <b>${text}</b>
 `;
 
   const users = await sql`SELECT * FROM "tg-users";`;
   users.rows.forEach((r) => {
     //console.log('row: ',r)
-    bot.api.sendMessage(<number>r.id, message, { parse_mode: 'HTML' });
+    return bot.api.sendMessage(<number>r.id, message, { parse_mode: 'HTML' });
   });
 };

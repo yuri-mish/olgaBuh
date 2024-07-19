@@ -15,7 +15,11 @@ export function Header() {
         className='bg-white mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8  w-full top-0 z-50'
       >
         <div className='flex lg:flex-1 items-center gap-4'>
-          <a href='#' className='-m-1.5 p-1.5'>
+          <a
+            href='/'
+            className='-m-1.5 p-1.5'
+            onClick={() => setMobileMenuOpen(true)}
+          >
             <span className='sr-only'>Your Company</span>
             <Image
               alt=''
@@ -66,7 +70,7 @@ export function Header() {
         <div className='fixed inset-0 z-10' />
         <DialogPanel className='fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
           <div className='flex items-center justify-between'>
-            <a href='#' className='-m-1.5 p-1.5'>
+            <a href='/#section1' className='-m-1.5 p-1.5'>
               {/* <span className="sr-only">Your Company</span> */}
               <Image
                 alt=''
@@ -89,14 +93,16 @@ export function Header() {
             <div className='-my-6 divide-y divide-gray-500/10'>
               <div className='space-y-2 py-6'>
                 <a
-                  href='#'
+                  href='/#section2'
                   className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Послуги
                 </a>
                 <a
-                  href='#'
+                  href='/#sectionContact'
                   className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Контакти
                 </a>
