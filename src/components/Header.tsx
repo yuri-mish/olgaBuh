@@ -39,19 +39,19 @@ export function Header() {
         </div>
         <PopoverGroup className='hidden md:flex md:gap-x-12'>
           <a
-            href='#section1'
+            href='/#section1'
             className='text-sm font-semibold leading-6 text-gray-900'
           >
             Основна
           </a>
           <a
-            href='#section2'
+            href='/#section2'
             className='text-sm font-semibold leading-6 text-gray-900'
           >
             Послуги
           </a>
           <a
-            href='#sectionContact'
+            href='/#sectionContact'
             className='text-sm font-semibold leading-6 text-gray-900'
           >
             Контакти
