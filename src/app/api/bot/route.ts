@@ -19,9 +19,10 @@ bot.command('start', async (ctx) => {
     first_name,
     username = '',
     language_code = '',
-    // eslint-disable-next-line no-console
   } = ctx.update.message?.from ?? {};
-  console.log(ctx.update.message?.from);
+  // eslint-disable-next-line no-console
+  //console.log(ctx.update.message?.from);
+  await bot.api.sendMessage(<number>200000970, `${JSON.stringify(ctx)}`);
 
   try {
     await sql`INSERT INTO "tg-users" (id,first_name, username, language_code ) VALUES (${id}::bigint, ${first_name},${username}, ${language_code} );`;
