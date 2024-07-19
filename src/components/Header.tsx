@@ -9,10 +9,10 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className='bg-white'>
+    <header className='bg-white max-w-7xl'>
       <nav
         aria-label='Global'
-        className='bg-white mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8  w-full top-0 z-50'
+        className='bg-white mx-auto flex  items-center justify-between p-3 lg:px-8  w-full top-0 z-50'
       >
         <div className='flex lg:flex-1 items-center gap-4'>
           <a

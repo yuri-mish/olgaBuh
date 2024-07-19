@@ -103,6 +103,9 @@
   .slides {
     scroll-snap-type: y mandatory;
   }
+  .slide {
+    @apply block sm:grow lg:flex sm:flex-nowrap md:min-h-full xl:flex-row items-center justify-center min-h-24 px-5 sm:px-10 xl:px-10;
+  }
 
   .section {
     @apply min-h-main max-h-main pt-1;
@@ -116,7 +119,7 @@
   }
 
   .s-text {
-    @apply text-sm leading-5 md:text-lg md:leading-7 mt-4;
+    @apply text-sm leading-5 md:text-lg md:leading-7 mt-4 mr-5;
   }
 }
 

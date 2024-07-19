@@ -8,8 +8,8 @@ const Banner = () => {
   return (
     <div className='slides flex flex-col max-h-[calc(100vh-57px)] overflow-y-scroll '>
       <section id='section1' className='section items-center overflow-hidden '>
-        <div className='block sm:grow lg:flex sm:flex-nowrap md:min-h-full xl:flex-row items-center justify-center min-h-24 px-5 sm:px-10 xl:px-10 '>
-          <div className='max-w-xl'>
+        <div className='slide'>
+          <div className='max-w-3xl'>
             <div className='s-header '>
               Стомилися самостійно сплачувати податки і подавати звітність?
             </div>
@@ -41,7 +41,7 @@ const Banner = () => {
       </section>
 
       <section id='section2' className='section items-center overflow-hidden'>
-        <div className='block sm:grow sm:flex sm:flex-nowrap xl:min-h-full xl:flex-row items-center justify-center min-h-24 px-5 sm:px-10 xl:px-10'>
+        <div className='slide'>
           <div className=''>
             {/* <div className='s-header '>
             Важливо!!! <br/> Під час воєнного стану
@@ -70,8 +70,8 @@ const Banner = () => {
         id='sectionMilitary'
         className='section items-center overflow-hidden'
       >
-        <div className='block sm:grow sm:flex sm:flex-nowrap xl:min-h-full xl:flex-row items-center justify-center min-h-24 px-5 sm:px-10 xl:px-10'>
-          <div className=''>
+        <div className='slide'>
+          <div className='max-w-3xl'>
             <div className='s-header'>
               Важливо!!! <br /> Під час воєнного стану
             </div>
@@ -89,20 +89,30 @@ const Banner = () => {
               безпосередньо приймати відвідувачів з міркувань безпеки.
             </p>
           </div>
+          <div className='flex mt-0 md:mt-7 w-full'>
+            <NextImage
+              useSkeleton
+              className='w-[100%] md:h-[75%] lg:w-full'
+              src='/images/charger.png'
+              width='714'
+              height='568'
+              alt='Icon'
+            />
+          </div>
         </div>
       </section>
       <section
         id='sectionContact'
         className='section items-center overflow-hidden'
       >
-        <div className='block sm:grow sm:flex sm:flex-nowrap xl:min-h-full xl:flex-row items-center justify-center min-h-24 px-5 sm:px-10 xl:px-10'>
+        <div className='slide'>
           <div className=''>
             <div className='s-header'>
               Час роботи офісів і контакт-центру для взаємодії з клієнтами:
             </div>
             <p className='s-text'>
               Пон-П'ят – з 8:30 до 18:30 без перерви <br />
-              Субота в телефонному режимі <br />
+              Субота - в телефонному режимі <br />
               Неділя – зачинено
               <br />
               <br />
