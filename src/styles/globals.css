@@ -112,6 +112,7 @@
     /* height: calc(100vh - 56px); */
     display: inline-block;
     scroll-snap-align: start;
+    background: linear-gradient(to bottom right, #f2f2ff, #a9ace8);
   }
 
   .s-header {
@@ -120,6 +121,22 @@
 
   .s-text {
     @apply text-sm leading-5 md:text-lg md:leading-7 mt-4 mr-5;
+  }
+
+  .services {
+    @apply block md:flex md:flex-row pt-2 gap-10;
+  }
+
+  .services-card {
+    @apply pt-5;
+  }
+
+  ul {
+    list-style: disc;
+    list-style-position: inside;
+    li {
+      @apply pl-5;
+    }
   }
 }
 

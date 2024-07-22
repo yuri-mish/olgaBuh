@@ -3,16 +3,19 @@
 import { Dialog, DialogPanel, PopoverGroup } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
+
+import BSLogo from '/public/images/BSCompany.svg';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className='bg-white max-w-7xl'>
+    <header className='bg-blue-700'>
       <nav
         aria-label='Global'
-        className='bg-white mx-auto flex  items-center justify-between p-3 lg:px-8  w-full top-0 z-50'
+        className='bg-blue-700 text-white mx-auto flex  items-center justify-between p-3 lg:px-8  w-full top-0 z-50'
       >
         <div className='flex lg:flex-1 items-center gap-4'>
           <a
@@ -20,46 +23,35 @@ export function Header() {
             className='-m-1.5 p-1.5'
             onClick={() => setMobileMenuOpen(true)}
           >
-            <span className='sr-only'>Бухнаотерські послуги Київ</span>
-            <Image
-              alt=''
-              src='/favicon/favicon-96x96.png'
-              width='64'
-              height={64}
-              className='h-8 w-auto'
-            />
+            <span className='sr-only'>Бухгалтерські послуги Київ</span>
+
+            <BSLogo className='fill-[#ffe600] w-[120px]' />
           </a>
-          <div className='italic h3'>Бухгалтерські послуги</div>
+          <div className='italic h4'>Бухгалтерські послуги</div>
         </div>
         <div className='flex md:hidden'>
           <button
             type='button'
             onClick={() => setMobileMenuOpen(true)}
-            className='-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700'
+            className='-m-2.5 inline-flex items-center justify-center rounded-md p-2.5'
           >
             <span className='sr-only'>Головне меню</span>
             <Bars3Icon aria-hidden='true' className='h-6 w-6' />
           </button>
         </div>
         <PopoverGroup className='hidden md:flex md:gap-x-12'>
-          <a
-            href='/#section1'
-            className='text-sm font-semibold leading-6 text-gray-900'
-          >
+          <Link href='/#section1' className='text-sm font-semibold leading-6'>
             Основна
-          </a>
-          <a
-            href='/#section2'
-            className='text-sm font-semibold leading-6 text-gray-900'
-          >
+          </Link>
+          <Link href='/services' className='text-sm font-semibold leading-6 '>
             Послуги
-          </a>
-          <a
+          </Link>
+          <Link
             href='/#sectionContact'
-            className='text-sm font-semibold leading-6 text-gray-900'
+            className='text-sm font-semibold leading-6 '
           >
             Контакти
-          </a>
+          </Link>
         </PopoverGroup>
       </nav>
       <Dialog
@@ -70,7 +62,7 @@ export function Header() {
         <div className='fixed inset-0 z-10' />
         <DialogPanel className='fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
           <div className='flex items-center justify-between'>
-            <a href='/#section1' className='-m-1.5 p-1.5'>
+            <Link href='/#section1' className='-m-1.5 p-1.5'>
               {/* <span className="sr-only">Your Company</span> */}
               <Image
                 alt=''
@@ -79,7 +71,7 @@ export function Header() {
                 height='64'
                 className='h-8 w-auto'
               />
-            </a>
+            </Link>
             <button
               type='button'
               onClick={() => setMobileMenuOpen(false)}
@@ -92,20 +84,20 @@ export function Header() {
           <div className='mt-6 flow-root'>
             <div className='-my-6 divide-y divide-gray-500/10'>
               <div className='space-y-2 py-6'>
-                <a
-                  href='/#section2'
+                <Link
+                  href='/services'
                   className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Послуги
-                </a>
-                <a
+                </Link>
+                <Link
                   href='/#sectionContact'
                   className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Контакти
-                </a>
+                </Link>
               </div>
             </div>
           </div>
