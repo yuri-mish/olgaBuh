@@ -94,17 +94,25 @@
 
   /* Class to adjust with sticky footer */
   .min-h-main {
-    @apply min-h-[calc(100vh-56px)];
+    @apply min-h-[calc(100vh-66px)];
   }
   .max-h-main {
-    @apply max-h-[calc(100vh-56px)];
+    @apply max-h-[calc(100vh-66px)];
   }
 
   .slides {
     scroll-snap-type: y mandatory;
   }
   .slide {
-    @apply block sm:grow lg:flex sm:flex-nowrap md:min-h-full xl:flex-row items-center justify-center min-h-24 px-5 sm:px-10 xl:px-10;
+    @apply block sm:grow lg:flex sm:flex-nowrap md:min-h-full xl:flex-row mt-5 justify-center min-h-24 px-5 sm:px-10 xl:px-10;
+    .sleft {
+      flex: 2 2 200rem;
+      align-self: center;
+    }
+    .sright {
+      flex: 1 1 40rem;
+      align-self: center;
+    }
   }
 
   .section {
@@ -116,11 +124,11 @@
   }
 
   .s-header {
-    @apply font-bold leading-5 text-lg md:text-3xl md:leading-[1.76rem];
+    @apply font-bold leading-5 text-lg md:text-2xl md:leading-[1.76rem] mt-5;
   }
 
   .s-text {
-    @apply text-sm leading-5 md:text-lg md:leading-7 mt-4 mr-5;
+    @apply text-sm leading-5 md:text-base md:leading-5 mt-2 mr-5;
   }
 
   .services {

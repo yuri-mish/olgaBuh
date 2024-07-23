@@ -5,6 +5,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { HiOutlinePhone } from 'react-icons/hi';
 
 import BSLogo from '/public/images/BSCompany.svg';
 
@@ -25,7 +26,7 @@ export function Header() {
           >
             <span className='sr-only'>Бухгалтерські послуги Київ</span>
 
-            <BSLogo className='fill-[#ffe600] w-[120px]' />
+            <BSLogo className='fill-[#ffe600] w-[120px] z-55' />
           </a>
           <div className='italic h4'>Бухгалтерські послуги</div>
         </div>
@@ -39,7 +40,7 @@ export function Header() {
             <Bars3Icon aria-hidden='true' className='h-6 w-6' />
           </button>
         </div>
-        <PopoverGroup className='hidden md:flex md:gap-x-12'>
+        <PopoverGroup className='hidden md:flex md:gap-x-10'>
           <Link href='/#section1' className='text-sm font-semibold leading-6'>
             Основна
           </Link>
@@ -51,6 +52,10 @@ export function Header() {
             className='text-sm font-semibold leading-6 '
           >
             Контакти
+          </Link>
+          <Link href='' className='flex items-center gap-2'>
+            <HiOutlinePhone />
+            095 541 98 10
           </Link>
         </PopoverGroup>
       </nav>

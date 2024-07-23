@@ -6,31 +6,46 @@ import NextImage from '@/components/NextImage';
 
 const Banner = () => {
   return (
-    <div className='slides flex flex-col max-h-[calc(100vh-57px)] overflow-y-scroll '>
+    <div className='slides flex flex-col max-h-[calc(100vh-65px)] overflow-y-scroll '>
       <section id='section1' className='section items-center overflow-hidden '>
         <div className='slide'>
-          <div className='max-w-3xl'>
+          <div className='sleft max-w-5xl'>
             <div className='s-header '>
               Стомилися самостійно сплачувати податки і подавати звітність?
             </div>
             <p className='s-text'>
-              Надаємо послуги професійного бухгалтерського супроводу малих,
-              середніх та великих підприємств а також ФОП. Подача звітностів в
-              контролюючі органи. Ведення обліку за національними та
-              міжнародними стандартами а також надаємо власникам бізнесу
-              безцінну інформацію щодо розробки, налаштування та впровадження
-              іноваційних , технологічних та організаційних рішень для
-              підвищення ефективності діяльності компаніі, зорієнтуємо в
-              складному податковому законодавстві
+              Надаємо послуги професійного бухгалтерського супроводу юридичних
+              осіб та ФОП <br />
+              Подання звітностів в контролюючі органи. <br />
+              Консультування з питань комерційної діяльності і керування <br />
+              Працюючи з нами ви отримаєте оботу «під ключ»
             </p>
-            {/* <Button className='hidden md:flex mt-11'>
-              Explore Now
-            </Button> */}
+            <ul className='s-text'>
+              <li>вчасно формуємо та подаємо звітність</li>
+              <li>приводимо до ладу документообіг</li>
+              <li>допомога у складанні договорів</li>
+              <li>радимо при вирішенні складних питань</li>
+              <li>розрахуємо ваші податки без помилок та зайвих витрат</li>
+            </ul>
+            <div className='s-header '>Експертність та професіоналізм</div>
+            <p className='s-text'>
+              ми спеціалісти з досвідом роботи більше 15 років
+              <br />
+              дотримуємося комерційної таємниці <br />
+              підписуємо угоду перед початком співпраці
+            </p>
+            <div className='s-header '>Маємо успішний досвід:</div>
+            <div className='flex flex-col s-text font-bold'>
+              <span className='pl-5'>Послуги</span>
+              <span className='pl-10'>Оптова торгівля</span>
+              <span className='pl-20'>Виробництво</span>
+              <span className='pl-28'>Неприбуткові організації</span>
+            </div>
           </div>
-          <div className='flex mt-0 md:mt-7 w-full'>
+          <div className='flex sright mt-0 md:mt-7 w-full'>
             <NextImage
               useSkeleton
-              className='w-[100%] md:h-[75%] lg:w-full'
+              className='w-[75%] md:h-[75%] lg:w-full'
               src='/images/banner.png'
               width='714'
               height='568'
@@ -42,7 +57,7 @@ const Banner = () => {
 
       <section id='section2' className='section items-center overflow-hidden'>
         <div className='slide'>
-          <div className=''>
+          <div className='sleft'>
             {/* <div className='s-header '>
             Важливо!!! <br/> Під час воєнного стану
             </div> */}
@@ -53,7 +68,7 @@ const Banner = () => {
               комплексний підхід у вирішенні поточних та стратегічних завдань.
             </p>
           </div>
-          <div className='flex mt-0 md:mt-7 w-full'>
+          <div className='flex sright mt-0 md:mt-7 w-full'>
             <NextImage
               useSkeleton
               className='w-[100%] md:h-[75%] lg:w-full'
@@ -71,7 +86,7 @@ const Banner = () => {
         className='section items-center overflow-hidden'
       >
         <div className='slide'>
-          <div className='max-w-3xl'>
+          <div className='sleft max-w-3xl'>
             <div className='s-header'>
               Важливо!!! <br /> Під час воєнного стану
             </div>
@@ -89,7 +104,7 @@ const Banner = () => {
               безпосередньо приймати відвідувачів з міркувань безпеки.
             </p>
           </div>
-          <div className='flex mt-0 md:mt-7 w-full'>
+          <div className='flex sright mt-0 md:mt-7 w-full'>
             <NextImage
               useSkeleton
               className='w-[100%] md:h-[75%] lg:w-full'
@@ -106,7 +121,7 @@ const Banner = () => {
         className='section items-center overflow-hidden'
       >
         <div className='slide'>
-          <div className=''>
+          <div className='sleft'>
             <div className='s-header'>
               Час роботи офісів і контакт-центру для взаємодії з клієнтами:
             </div>
@@ -116,14 +131,15 @@ const Banner = () => {
               Неділя – зачинено
               <br />
               <br />
-              Онлайн-візити / Послуги на місці
-              <br />
             </p>
+            <b>Для замовлення послуги:</b>
+            <br />
+
             <div className='flex items-center gap-5'>
-              <HiOutlinePhone /> 095 541 98 10{' '}
+              <HiOutlinePhone /> 095 541 98 10
             </div>
             <div className='flex items-center gap-5'>
-              <HiOutlineMail /> olganik2477@gmail.com{' '}
+              <HiOutlineMail /> olganik2477@gmail.com
             </div>
 
             <Button className=' md:flex mt-11'>
