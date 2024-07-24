@@ -134,14 +134,12 @@ const Banner = () => {
             </p>
             <b>Для замовлення послуги:</b>
             <br />
-
             <div className='flex items-center gap-5'>
               <HiOutlinePhone /> 095 541 98 10
             </div>
             <div className='flex items-center gap-5'>
               <HiOutlineMail /> olganik2477@gmail.com
             </div>
-
             <Button className=' md:flex mt-11'>
               <Link href='/callrequest'>Замовити дзвінок </Link>
             </Button>
