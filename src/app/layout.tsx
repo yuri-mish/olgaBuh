@@ -66,6 +66,12 @@ export default function RootLayout({
       lang='uk'
       className={`${comfortaa.variable} font-comfortaa min-h-screen max-h-screen`}
     >
+      <head>
+        <meta
+          name='google-site-verification'
+          content='xlxjJ0CZWAHHRY3xHAz4utJkPpUqucaB5Ol5na206kA'
+        />
+      </head>
       <body className='font-comfortaa block '>
         <main className='flex flex-col relative'>
           <Header />
